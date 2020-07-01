@@ -13,74 +13,32 @@
 
     <section class="cards">
 
-        <div class="card" id="starter" >
+        {% for card in course %}
+
+            <div class="card" id="{{card.id}}" >
 
             <div class="card__image-container">
 
-                <img src="/assets/starter.svg" alt="Starter">
+                <img src="{{card.img}}" alt="Imagem de {{card.name}}">
 
             </div>
 
             <div class="card__content">
 
-                <h1>Linha Starter</h1>
+                <h1>Linha {{card.name}}</h1>
                 
             </div>
 
             <div class="card__info">
 
-                <h2>5 Módulos</h2>
-                <p>Free</p>
+                <h2>{{card.module}}</h2>
+                <p>{{card.price}}</p>
 
             </div>
 
         </div>
 
-        <div class="card" id= "launchbase">
-
-            <div class="card__image-container">
-
-                <img src="/assets/launchbase.svg" alt="Launchbase">
-
-            </div>
-
-            <div class="card__content">
-
-                <h1>Linha Launchbase</h1>
-                
-            </div>
-
-            <div class="card__info">
-
-                <h2>8 Módulos</h2>
-                <p>Pago</p>
-
-            </div>
-
-        </div>
-
-        <div class="card" id="gostack">
-
-            <div class="card__image-container">
-
-                <img src="/assets/gostack.svg" alt="GoStack">
-
-            </div>
-
-            <div class="card__content">
-
-                <h1>Linha GoStack</h1>
-                
-            </div>
-
-            <div class="card__info">
-
-                <h2>10 Módulos</h2>
-                <p>Pago</p>
-
-            </div>
-
-        </div>
+        {% endfor %}
 
     </section>
 

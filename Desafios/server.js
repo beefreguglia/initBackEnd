@@ -1,5 +1,7 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
+const about = require("./data-about") 
+const course = require("./data-courses")
 
 const server = express()
 
@@ -15,14 +17,14 @@ nunjucks.configure("views", {
 
 server.get("/", function(req, res){
 
-    return res.render("courses")
+    return res.render("courses", {course})
 
 })
 
 server.get("/about", function(req, res){
 
-    return res.render("about")
 
+    return res.render("about", {about})
 
 })
 
