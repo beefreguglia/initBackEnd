@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 {% block head %}
 
@@ -19,143 +19,32 @@
 
     <section class="cards">
 
-        <div class="card" id="rCeGfFk-uCk">
+        {% for item in items %}
 
-            <div class="card__image-container">
+            <div class="card" id="{{item.id}}">
 
-                <img src="https://img.youtube.com/vi/rCeGfFk-uCk/maxresdefault.jpg" alt="Aula">
+                <div class="card__image-container">
 
-            </div>
+                    <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="Imagem de {{item.title}}">
 
-            <div class="card__content">
+                </div>
 
-                <p>Setup para apps Node.js (TypeScript, ESLint, Jest, Babel) | Code/Drops #33</p>
+                <div class="card__content">
 
-            </div>
+                    <p>{{item.title}}</p>
 
-            <div class="card__info">
+                </div>
 
-                <p>40 min</p>
-                <p class="card__price">FREE</p>
+                <div class="card__info">
 
-            </div>
+                    <p>{{item.duration}}</p>
+                    <p class="card__price">{{item.price}}</p>
 
-        </div>
-
-        <div class="card" id="hN0zWNuZJC4">
-
-            <div class="card__image-container">
-
-                <img src="https://img.youtube.com/vi/hN0zWNuZJC4/maxresdefault.jpg" alt="Aula">
+                </div>
 
             </div>
 
-            <div class="card__content">
-
-                <p>Deno, Dashboard, Frustração na Carreira, Eject do Expo, Monorepo | #PR 08</p>
-
-            </div>
-
-            <div class="card__info">
-
-                <p>40 min</p>
-                <p class="card__price">FREE</p>
-
-            </div>
-
-        </div>
-
-        <div class="card" id="xDFzOp2BoS8">
-
-            <div class="card__image-container">
-
-                <img src="https://img.youtube.com/vi/xDFzOp2BoS8/maxresdefault.jpg" alt="Aula">
-
-            </div>
-
-            <div class="card__content">
-
-                <p>Open Source? Como virar Pleno? TypeORM? Emprego antes dos 18? Context API vs. Redux? | #PR 07</p>
-
-            </div>
-
-            <div class="card__info">
-
-                <p>40 min</p>
-                <p class="card__price">FREE</p>
-
-            </div>
-
-        </div>
-
-        <div class="card" id="NLcXijzqP9M">
-
-            <div class="card__image-container">
-
-                <img src="https://img.youtube.com/vi/NLcXijzqP9M/maxresdefault.jpg" alt="Aula">
-
-            </div>
-
-            <div class="card__content">
-
-                <p>Começar pelo TypeScript ou JavaScript? Python, Deno, React Native ou Flutter? | #PR 05</p>
-
-            </div>
-
-            <div class="card__info">
-
-                <p>40 min</p>
-                <p class="card__price">FREE</p>
-
-            </div>
-
-        </div>
-
-        <div class="card" id="XomJBk4krnI">
-
-            <div class="card__image-container">
-
-                <img src="https://img.youtube.com/vi/XomJBk4krnI/maxresdefault.jpg" alt="Aula">
-
-            </div>
-
-            <div class="card__content">
-
-                <p>Idade na programação, Medo de entrevista, Realocação no Mercado e Trabalho Remoto | #PR 02</p>
-
-            </div>
-
-            <div class="card__info">
-
-                <p>40 min</p>
-                <p class="card__price">FREE</p>
-
-            </div>
-
-        </div>
-
-        <div class="card" id="f7jMO95AHmA">
-
-            <div class="card__image-container">
-
-                <img src="https://img.youtube.com/vi/f7jMO95AHmA/maxresdefault.jpg" alt="Aula">
-
-            </div>
-
-            <div class="card__content">
-
-                <p>Qual teclado o Diego usa? Adonis V5 + Typescript? Sequelize ou TypeORM? O que é Hermes? | #PR 03</p>
-
-            </div>
-
-            <div class="card__info">
-
-                <p>40 min</p>
-                <p class="card__price">FREE</p>
-
-            </div>
-
-        </div>
+        {% endfor %}
 
     </section>
 

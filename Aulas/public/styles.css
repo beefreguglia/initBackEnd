@@ -128,6 +128,7 @@ header {
 
     background-color: var(--color-purple);
     border-radius: 8px ;
+    display: grid;
 
 }
 
@@ -150,6 +151,7 @@ header {
     padding: 24px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 
 }
 
