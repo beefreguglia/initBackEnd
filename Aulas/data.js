@@ -14,7 +14,8 @@ module.exports = [
         id: "hN0zWNuZJC4",
         title: "Deno, Dashboard, Frustração na Carreira, Eject do Expo, Monorepo | #PR 08",
         duration: "11:06",
-        price: "FREE"
+        price: "FREE",
+        featured: true
 
     },
 
@@ -32,7 +33,8 @@ module.exports = [
         id: "NLcXijzqP9M",
         title: "Começar pelo TypeScript ou JavaScript? Python, Deno, React Native ou Flutter? | #PR 05",
         duration: "07:18",
-        price: "FREE"
+        price: "FREE",
+        featured: true
 
 
     },
@@ -42,7 +44,8 @@ module.exports = [
         id: "XomJBk4krnI",
         title: "Idade na programação, Medo de entrevista, Realocação no Mercado e Trabalho Remoto | #PR 02",
         duration: "17:20",
-        price: "FREE"
+        price: "FREE",
+        featured: true
 
 
     },

@@ -1,0 +1,32 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+    <title>Desafio 3.3</title>
+    <link rel="stylesheet" href="/styles.css">
+
+{% endblock head %}
+
+{% block content %}
+
+    <section class="desc">
+
+        <div class="card" id="{{card.id}}">
+
+            <div class="card__image-container">
+
+                <img src="{{card.img}}" alt="Imagem de {{card.name}}">
+
+            </div>
+
+            <div class="card__content">
+
+                <p>{{card.description}}</p>
+                
+            </div>
+
+        </div>
+
+    </section>
+
+{% endblock content %}

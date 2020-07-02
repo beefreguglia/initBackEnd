@@ -11,7 +11,9 @@ server.use(express.static('public'))
 
 nunjucks.configure("views", {
 
-    express: server
+    express: server,
+    autoescape: false,
+    noCache: true
 
 })
 
@@ -20,6 +22,26 @@ server.get("/", function(req, res){
     return res.render("courses", {course})
 
 })
+
+server.get("/courses/:id", function(req, res) {
+    
+    const id = req.params.id;
+  
+    const desc = course.find(function(desc){
+
+        return desc.id == id;
+
+    })
+
+    if(!desc){
+
+        return res.render("not-found");
+
+    }
+
+    return res.render("description", {card: desc});
+  
+});
 
 server.get("/about", function(req, res){
 

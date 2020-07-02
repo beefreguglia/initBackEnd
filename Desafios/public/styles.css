@@ -312,3 +312,24 @@ iframe{
     margin-top: 20px;
 
 }
+
+.desc{
+
+    margin: 50px auto;
+    max-width: 800px;
+
+}
+
+.desc img{
+
+    padding-bottom: 60px;
+
+}
+
+.desc p{
+
+    text-align: center;
+    margin: 10px 20px 40px;
+    font-size: 30px;
+    color: white;
+}

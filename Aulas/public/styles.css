@@ -129,6 +129,7 @@ header {
     background-color: var(--color-purple);
     border-radius: 8px ;
     display: grid;
+    cursor: pointer;
 
 }
 
@@ -216,4 +217,48 @@ iframe{
     height: 90%;
     position: absolute;
     top: 5%;
+}
+
+/* Featured */
+
+.featured-wrapper.card__image-container{
+
+    position: relative;
+
+}
+
+.featured{  
+
+    background-color: #f7d05f;
+    color: #111;
+    padding: 2px 8px;
+    position: absolute;
+    right: 3px;
+    border-radius: 16px;
+    top: -10px;
+
+}
+
+/* VIDEO PAGE */
+
+.video{
+
+    margin: 0 auto;
+    max-width: 800px;
+
+}
+
+.card__video-container{
+
+    position: relative;
+    padding-top: 60%;
+
+}
+
+.card__video-container iframe{
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
 }
